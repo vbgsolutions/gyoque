@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabriela Yoque — Artist</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -286,20 +287,6 @@
       transform: translateY(0);
     }
 
-    .collection-card-count {
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin-top: 0.4rem;
-      opacity: 0;
-      transition: opacity 0.3s ease 0.1s;
-    }
-
-    .collection-card:hover .collection-card-count {
-      opacity: 1;
-    }
-
     /* ── STATEMENT ── */
     .statement-section {
       padding: 7rem 4rem;
@@ -321,6 +308,93 @@
       font-size: 1.4rem;
       font-style: italic;
       color: var(--ink);
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      padding: 5rem 4rem 6rem;
+      background: var(--ink);
+    }
+
+    .contact-section .section-eyebrow {
+      color: var(--ash);
+    }
+
+    .contact-section .section-title {
+      color: var(--cream);
+      margin-bottom: 3rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      text-decoration: none;
+      group: true;
+    }
+
+    .contact-link-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .contact-link:hover .contact-link-icon {
+      border-color: var(--terracotta);
+      background: rgba(184,92,56,0.1);
+    }
+
+    .contact-link-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--ash);
+      transition: fill 0.2s;
+    }
+
+    .contact-link:hover .contact-link-icon svg {
+      fill: var(--terracotta);
+    }
+
+    .contact-link-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .contact-link-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+
+    .contact-link-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      font-style: italic;
+      color: #ccc;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover .contact-link-value {
+      color: var(--cream);
+    }
+
+    @media (max-width: 900px) {
+      .contact-section { padding: 4rem 1.5rem 5rem; }
     }
 
     @keyframes fadeIn { to { opacity: 1; } }
@@ -439,6 +513,7 @@
     <a href="index.html" class="nav-main active">Home</a>
     <a href="#collections" class="nav-main">Collections</a>
     <a href="#statement" class="nav-main">Statement</a>
+    <a href="#contact" class="nav-main">Contact</a>
     <hr style="margin-top:1rem;" />
     <div class="nav-label">Collections</div>
     <a href="collection-our-voices.html">Our Voices</a>
@@ -465,6 +540,7 @@
           <p>Born in the San Fernando Valley within Los Angeles, California, and raised by immigrant parents, Gabriela Yoque is a multimedia, project based artist. Her work uses her personal narratives and experiences as a means to understand larger social issues.</p>
           <p>She has exhibited in group shows throughout the country, including Tacoma, Washington; Grand Junction, Colorado; Los Angeles, California and Brooklyn, New York.</p>
           <p>She received her Bachelor's degree in Studio Arts and Computer Science at the University of Puget Sound, in Tacoma, Washington. Yoque received her Master's degree in Fine Arts at California College of the Arts in San Francisco, California.</p>
+          <p>Gabriela is the Media, Arts, &amp; Culture Director at RYSE Youth Center. She resides in the Bay Area, always accompanied by Milo, her faithful and ever-hungry pup.</p>
         </div>
       </div>
     </section>
@@ -480,56 +556,48 @@
           <img src="images/our-voices/our-voices-cover.jpg" alt="Our Voices" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Our Voices</div>
-            <div class="collection-card-count">5 works</div>
           </div>
         </a>
         <a href="collection-latinx.html" class="collection-card">
           <img src="images/latinx/latinx-cover.jpg" alt="Latinx" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Latinx</div>
-            <div class="collection-card-count">6 works</div>
           </div>
         </a>
         <a href="collection-tierra-generosa.html" class="collection-card">
           <img src="images/tierra-generosa/tierra-generosa-cover.jpg" alt="Tierra Generosa" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Tierra Generosa</div>
-            <div class="collection-card-count">14 works</div>
           </div>
         </a>
         <a href="collection-regreso-a-nada.html" class="collection-card">
           <img src="images/regreso-a-nada/regreso-a-nada-cover.jpg" alt="Regreso a Nada" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Regreso a Nada</div>
-            <div class="collection-card-count">16 works</div>
           </div>
         </a>
         <a href="collection-eat-them-anyway.html" class="collection-card">
           <img src="images/eat-them-any-way/eat-them-anyway-cover.jpg" alt="Eat Them Anyway" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Eat Them Anyway</div>
-            <div class="collection-card-count">8 works</div>
           </div>
         </a>
         <a href="collection-caminando.html" class="collection-card">
           <img src="images/caminando-con-los-angeles/caminando-con-los-ángeles-cover.jpg" alt="Caminando con los Ángeles" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Caminando con los Ángeles</div>
-            <div class="collection-card-count">12 works</div>
           </div>
         </a>
         <a href="collection-implicit.html" class="collection-card">
           <img src="images/implicit/implicit-cover.jpg" alt="Implicit" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Implicit</div>
-            <div class="collection-card-count">15 works</div>
           </div>
         </a>
         <a href="collection-espanol-chapinlandia.html" class="collection-card">
           <img src="images/espanol-chapinlandia/espanol-chapínlandia-cover.jpg" alt="Español Chapínlandia" />
           <div class="collection-card-overlay">
             <div class="collection-card-title">Español Chapínlandia</div>
-            <div class="collection-card-count">4 works</div>
           </div>
         </a>
       </div>
@@ -539,7 +607,6 @@
     <section class="statement-section" id="statement">
       <div class="section-header">
         <div class="section-eyebrow">Artist Statement</div>
-        <h2 class="section-title">Statement</h2>
       </div>
       <div class="statement-text">
         <p>As the daughter of immigrants…</p>
@@ -551,9 +618,56 @@
         <p>I will continue to work within the divide of these spaces as I create work that uses my personal narrative to speak to my communities and simultaneously thrives in traditional art spaces.</p>
       </div>
     </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="section-header">
+        <div class="section-eyebrow">Get in Touch</div>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-links">
+
+        <a href="https://www.instagram.com/gabrielayoque" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">Instagram</span>
+            <span class="contact-link-value">@gabrielayoque</span>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/gabrielayoque/" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-value">linkedin.com/in/gabrielayoque</span>
+          </div>
+        </a>
+
+        <a href="/cdn-cgi/l/email-protection#a9ce87d0c6d8dccce9cec4c8c0c587cac6c4" class="contact-link">
+          <div class="contact-link-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div class="contact-link-text">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value"><span class="__cf_email__" data-cfemail="791e570016080c1c391e14181015571a1614">[email&#160;protected]</span></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
   </main>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const hamburger = document.getElementById('hamburger');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('navOverlay');
@@ -569,14 +683,4 @@
     });
 
     // Close nav when clicking a link on mobile
-    sidebar.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
-          sidebar.classList.remove('open');
-          overlay.classList.remove('visible');
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+    sidebar.querySelectorAll('a').forEa
